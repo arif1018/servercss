@@ -7,4 +7,4 @@ router.route("/addclient").post(addClient)
 router.route("/clientdata/:id").get(getSingleClient)
 router.route("/updateclient/:id").put(updateClient).delete(deleteClient)
 
-module.exports = router
+module.exports = router 

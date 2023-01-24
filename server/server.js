@@ -9,7 +9,7 @@ connectDB();
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-app.use("/api/users", require("./routes/userRoute"));
+app.use("/api/users", require("./routes/userRoute"));``
 app.use("/api/branches", require("./routes/branchRoute"));
 app.use("/api/clients", require("./routes/clientRoute"));
 app.use("/api/paidleave", require("./routes/paidleaveRoute"));
@@ -32,6 +32,11 @@ app.use("/api/earningdeduction", require("./routes/earningDeductionRoute"));
 app.use("/api/registrant", require("./routes/registrantRoute"));
 app.use("/api/payroll", require("./routes/payrollRoute"));
 app.use("/api/company", require("./routes/companyProfileRoute"));
+app.use("/api/workhistory/", require("./routes/workHistoryRoute"));
+app.use("/api/intouch/", require("./routes/intouchRoutes"));
+app.use("/api/securitygroup/", require("./routes/securityGroupRoute"));
+app.use("/api/notificationtemplate/", require("./routes/notificationTemplateRoute"))
+app.use("/api/profitmarginranking/", require("./routes/profitMarginRankingRoute"))
 
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);

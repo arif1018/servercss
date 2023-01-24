@@ -74,7 +74,7 @@ const deleteClient = asyncHandler(async(req, res)=>{
         throw new Error("Client Not Found!...")
     }
     client.remove()
-    // const updatedGoal = await Goal.findByIdAndUpdate(req.params.id, req.body, {new:true})
+    // const updatedGoal = await Client.findByIdAndDelete(req.params.id, {new:true})
 
     res.status(200).json({message:"Client Deleted Successfully!..."})
 })
